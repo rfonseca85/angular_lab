@@ -1,0 +1,38 @@
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <link href="simpleGridList_style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script src="simpleGridList_server.js"></script>
+    <script src="simpleGridList_controller.js"></script>
+
+
+  </head>
+
+<body ng-controller="lolCtrl">
+
+<div class="inner">
+<div id="tab-contents">
+<div id="tab-all-champs">
+<div id="filter">
+
+	<div class="popular-list">
+		
+		<a ng-repeat="champion in champions" href="" data-roles="top,jungle" ng-click="championDetail(champion)">
+			<div class="ico"></div>
+			<img width="68px" height="68px" ng-src="{{imgUrl}}{{champion.image.full}}" alt="{{champion.key}}" >
+			<div class="title">{{champion.key}}</div>
+		</a>
+	 
+
+	</div>
+
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
+
